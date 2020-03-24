@@ -1334,7 +1334,7 @@ class Match implements Taskable {
 
                 $this->startMatch();
             }
-        } elseif ($this->isCommand($message, "pause")) {
+        } /*elseif ($this->isCommand($message, "pause")) {
             if ($this->isMatchRound() && !$this->isPaused && $this->enable) {
 
                 if ($message->getUserTeam() == "CT") {
@@ -1382,7 +1382,7 @@ class Match implements Taskable {
                 }
 
                 $this->unpauseMatch();
-            }
+            }*/
         } elseif (($this->getStatus() == self::STATUS_END_KNIFE) && ($message->getUserTeam() == $this->winKnife) && $this->isCommand($message, "stay")) {
             $this->setStatus(self::STATUS_WU_1_SIDE, true);
             $this->currentMap->setStatus(Map::STATUS_WU_1_SIDE, true);
